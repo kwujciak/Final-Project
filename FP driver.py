@@ -9,7 +9,6 @@ import FP_time as time_fnc
 import FP_currency as cur
 #import FP_attractions as at
 #import FP_FlightTime as ft
-#import time
 
 
 print("Welcome to your personal travel tool!")
@@ -33,4 +32,3 @@ if any(x in options for x in curr_words):
 
 
 
-#cur.US_Pound(amount, convert)

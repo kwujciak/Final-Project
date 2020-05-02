@@ -6,7 +6,6 @@ Created on Fri Apr 24 13:22:03 2020
 @author: katewujciak
 """
 
-
 def Main_currency(destination):
     if destination == "Tokyo":
         answer = input("Would you like to convert to from USD to Yen? ")
@@ -14,21 +13,33 @@ def Main_currency(destination):
             amount = float(input("How much would you like to convert (enter number)? "))
             US_Yen(amount, "US to Yen")
         else:
-            backup(amount)
+            convert = input("What would you like to convert? ")
+            if "US" in convert:
+                backup_1(amount, convert)
+            else:
+                backup_2(amount, convert)
     elif destination == "London":
         answer = input("Would you like to convert to from USD to Pound? ")
         amount = float(input("How much would you like to convert (enter number)? "))
         if answer == "yes" or answer == "Yes":
             US_Pound(amount, "US to Pound")
         else:
-            backup(amount) 
+            convert = input("What would you like to convert? ")            
+            if "US" in convert:
+                backup_1(amount, convert)
+            else:
+                backup_2(amount, convert)
     elif destination == "Rome":
         answer = input("Would you like to convert to from USD to Euro? ")
         amount = float(input("How much would you like to convert (enter number)? "))
         if answer == "yes" or answer == "Yes":
             US_Euro(amount, "US to Euro")
         else:
-            backup(amount)   
+            convert = input("What would you like to convert? ")
+            if "US" in convert:
+                backup_1(amount, convert)
+            else:
+                backup_2(amount, convert)   
     else:
         print("You do not need to convert.")
 
@@ -80,36 +91,22 @@ def Euro_Yen(amount, convert):
         euro = round((0.0086*amount),2)
         print("€" + str(euro))
 
-def backup(amount):
-    convert = input("What would you like to convert? ")    
-    if "Pound" and "Euro" in convert:
-        Pound_Euro(amount, convert)
+def backup_1(amount, convert):
+    if "US" and "Euro" in convert:
+        US_Euro(amount, convert)
     elif "US" and "Pound" in convert:
         US_Pound(amount, convert)
     elif "US" and "Yen" in convert:
         US_Yen(amount, convert)
-    elif "US" and "Euro" in convert:
-        US_Euro(amount, convert)
-    elif "Pound" and "Yen" in convert:
+    else:
+        print("Cannot convert this currency")    
+
+def backup_2(amount, convert):
+    if "Pound" and "Euro" in convert:
+        Pound_Euro(amount, convert)
+    elif "Yen" and "Pound" in convert:
         Pound_Yen(amount, convert)
-    elif "Yen" and "Euro" in convert:
+    elif "Euro" and "Yen" in convert:
         Euro_Yen(amount, convert)
     else:
-        print("cannot convert")
-    
-    
-    
-#if "Pound" and "Euro" in convert:
-#    Pound_Euro(amount)
-
-#else:
-#    print(" ")
-#    
-#if convert == "US to Euro" or convert == "Euro to US":
-#    US_Euro(amount)
-#elif convert == "Yen to Pound" or convert == "Pound to Yen":
-#    Pound_Yen(amount)
-#elif convert == "Yen to Euro" or convert == "Euro to Yen":
-#    Euro_Yen(amount)
-#else:
-#    print("Cannot convert this currency")
+        print("Cannot convert this currency")
