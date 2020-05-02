@@ -5,22 +5,32 @@ Created on Fri May  1 09:59:51 2020
 
 @author: katewujciak
 """
-
-import FP_time as time
+import FP_time as time_fnc
 import FP_currency as cur
-import FP_attractions as at
-import FP_FlightTime as ft
+#import FP_attractions as at
+#import FP_FlightTime as ft
+#import time
+
 
 print("Welcome to your personal travel tool!")
 print("Compatible destinations are:")
 print("London, Rome, Tokyo, New York, Chicago, Denver, and Los Angeles")
-destination = input("Where are you travelling?")
+tools = input("What would you like to know about your destination? ")
+options = list(tools.split(" ")) 
+time_words = ["time", "Time", "timezone", "Timezone"]
+curr_words = ["currency", "Currency", "exchange", "Exchange", "money"]
+destination = input("Where are you travelling? ")
 
-europe = ["London", "Rome"]
-US = ["New York", "Chicago", "Denver", "Los Angeles"]
-if destination in europe:
-    time.Europe()
-if destination == "Tokyo":
-    time.Japan()
-if destination in US:
-    time.US()
+if any(x in options for x in time_words):
+    time_fnc.Main_time(destination)
+if any(x in options for x in curr_words):
+    cur.Main_currency(destination)
+
+
+
+
+
+
+
+
+#cur.US_Pound(amount, convert)
