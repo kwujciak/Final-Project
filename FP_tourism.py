@@ -72,9 +72,7 @@ def graph_tourists(destination, future_yr):
     
     y1 = (m*(future_yr-mid))+med
     print("The predicted # of tourists in " + str(destination) + " in " + str(future_yr) + " is " + str(int(y1)) + " million.")
-    
-    
-#graph_London("New York", 2021)
-
+    if future_yr == 2020:
+        print("This number may be affected by the COVID-19 crisis.") 
 #print(np.amin(tourism))
 #print(np.amax(years))
