@@ -149,15 +149,3 @@ def US_time(destination):
         US_timezone = "PDT"
         return US_timezone 
 
- 
-   
-
-#def time_zone(destination):
-#    if destination == "Rome" or destination == "London":
-#        Europe()
-#    elif destination == "Japan":
-#        Japan()
-#    elif destination == "US":
-#        US()
-#        
-#time_zone(destination)

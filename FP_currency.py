@@ -14,6 +14,7 @@ def Main_currency(destination):
             US_Yen(amount, "US to Yen")
         else:
             convert = input("What would you like to convert? ")
+            amount = float(input("How much would you like to convert (enter number)? "))
             if "US" in convert:
                 backup_1(amount, convert)
             else:

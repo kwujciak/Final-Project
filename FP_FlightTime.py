@@ -12,21 +12,18 @@ import numpy as np
 
 flight_time = pd.read_csv("flight_times.csv")
 ft = np.array(flight_time)
-#print(ft[:1])
-#print(ft[:,0])
 
-
-#print(ft)
-print(flight_time.iloc[5, 5])
-print(flight_time.iloc[5, 6])
-print(flight_time.iloc[5, 7])
 
 def Main_flights(destination):
     origin = input("Are you flying from your current location? ")
-    if origin == "yes" or "Yes":
+    if origin == "yes" or origin == "Yes":
         departure(destination)
     else:
         depart = input("Where will you be flying from? ")
+        col = for_departure(depart)
+        row = arrival(destination)
+        print("The flight duration will be " + str(flight_time.iloc[row, col]))
+            
             
 def departure(destination):
     current_timezone = input("What is your current timezone (EDT, CDT, MDT, or PDT)? ")
@@ -39,71 +36,53 @@ def departure(destination):
     elif current_timezone == "PDT":
         col = 4
     if destination == "London":
-        row = 1
+        row = 0
     elif destination == "Rome":
-        row = 2
+        row = 1
     elif destination == "Tokyo":
-        row = 3
+        row = 2
     elif destination == "Los Angeles":
-        row = 4
+        row = 3
     elif destination == "Denver":
-        row = 5
+        row = 4
     elif destination == "Chicago":
-        row = 6
+        row = 5
     elif destination == "New York":
-        row = 7
-    print(flight_time.iloc[row, col])
+        row = 6
+    print("The flight duration will be " + str(flight_time.iloc[row, col])+ ".")
 
-Main_flights("Rome")
 
-#def from_CDT(destination):
-#    if destination == "London":
-#        row = 1
-#    elif destination == "Rome":
-#        row = 2
-#    elif destination == "Tokyo":
-#        row = 3
-#    elif destination == "Los Angeles":
-#        row = 4
-#    elif destination == "Denver":
-#        row = 5
-#    elif destination == "Chicago":
-#        row = 6
-#    elif destination == "New York":
-#        row = 7
-#    print(flight_time.iloc[row, 6])
-#    
-#def from_MDT(destination):
-#    if destination == "London":
-#        row = 1
-#    elif destination == "Rome":
-#        row = 2
-#    elif destination == "Tokyo":
-#        row = 3
-#    elif destination == "Los Angeles":
-#        row = 4
-#    elif destination == "Denver":
-#        row = 5
-#    elif destination == "Chicago":
-#        row = 6
-#    elif destination == "New York":
-#        row = 7
-#    print(flight_time.iloc[row, 5])
-#
-#def from_PDT(destination):
-#    if destination == "London":
-#        row = 1
-#    elif destination == "Rome":
-#        row = 2
-#    elif destination == "Tokyo":
-#        row = 3
-#    elif destination == "Los Angeles":
-#        row = 4
-#    elif destination == "Denver":
-#        row = 5
-#    elif destination == "Chicago":
-#        row = 6
-#    elif destination == "New York":
-#        row = 7
-#    print(flight_time.iloc[row, 4])
-    
+def for_departure(depart):
+    if depart == "London":
+        col = 1
+    elif depart == "Rome":
+        col = 2
+    elif depart == "Tokyo":
+        col = 3
+    elif depart == "Los Angeles":
+        col = 4
+    elif depart == "Denver":
+        col = 5
+    elif depart == "Chicago":
+        col = 6
+    elif depart == "New York":
+        col = 7
+    return col
+
+def arrival(destination):
+    if destination == "London":
+        row = 0
+    elif destination == "Rome":
+        row = 1
+    elif destination == "Tokyo":
+        row = 2
+    elif destination == "Los Angeles":
+        row = 3
+    elif destination == "Denver":
+        row = 4
+    elif destination == "Chicago":
+        row = 5
+    elif destination == "New York":
+        row = 6
+    return row
+
