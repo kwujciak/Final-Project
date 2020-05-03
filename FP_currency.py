@@ -105,9 +105,9 @@ def backup_1(amount, convert):
 def backup_2(amount, convert):
     if "Pound" and "Euro" in convert:
         Pound_Euro(amount, convert)
-    elif "Yen" and "Pound" in convert:
-        Pound_Yen(amount, convert)
     elif "Euro" and "Yen" in convert:
         Euro_Yen(amount, convert)
+    elif "Yen" and "Pound" in convert:
+        Pound_Yen(amount, convert)
     else:
         print("Cannot convert this currency")
