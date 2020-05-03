@@ -1,8 +1,8 @@
-,Flight Time from New York,Flight Time from Chicago,Flight Time from Denver,Flight Time from Los Angeles,Flight Time from London,Flight Time from Rome,Flight Time from Tokyo
-London,6h 50m,7h 45m,9h 15m,11h 25m,0,2h 45m,11h 50m
-Rome,8h 35m,10h 9m,11h 36m,13h 3m,2h 45m,0,12h 45m
-Los Angeles,6h,4h 30m,2h 30m,0,11h 25m,13h 3m,11h 28m
-Denver,4h 30m,2h 40m,0,2h 30m,9h 15m,11h 36m,12h 7m
-Chicago,2h 35m,0,2h 40m,4h 30m,7h 45m,10h 9m,13h
-New York,0,2h 35m,4h 30m,6h,6h 50m,8h 35m,14h
-Tokyo,14h,13h,12h 7m,11h 28m,11h 50m,15h 35m,0
+,Flight Time from London,Flight Time from Rome,Flight Time from Tokyo,Flight Time from Los Angeles,Flight Time from Denver,Flight Time from Chicago,Flight Time from New York
+London,0,2h 45m,11h 50m,11h 25m,9h 15m,7h 45m,6h 50m
+Rome,2h 45m,0,12h 45m,13h 3m,11h 36m,10h 9m,8h 35m
+Tokyo,11h 50m,15h 35m,0,11h 28m,12h 7m,13h,14h
+Los Angeles,11h 25m,13h 3m,11h 28m,0,2h 30m,4h 30m,6h
+Denver,9h 15m,11h 36m,12h 7m,2h 30m,0,2h 40m,4h 30m
+Chicago,7h 45m,10h 9m,13h,4h 30m,2h 40m,0,2h 35m
+New York,6h 50m,8h 35m,14h,6h,4h 30m,2h 35m,0

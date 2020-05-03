@@ -18,12 +18,15 @@ def Main_time(destination):
     if destination in europe:
         new_h = Europe(current_timezone)
         print("The time in " + str(destination) + " is " + str(new_h) + ":" + str(minute))
+        return current_timezone
     elif destination == "Tokyo":
         new_h = Japan(current_timezone)
         print("The time in Tokyo is " + str(new_h) + ":" + str(minute))
+        return current_timezone
     elif destination in USA:
         new_h = US(current_timezone, destination)
         print("The time in " + str(destination) + " is " + str(new_h) + ":" + str(minute))
+        return current_timezone
     
 def Europe(current_timezone):
     if current_timezone == "EDT":

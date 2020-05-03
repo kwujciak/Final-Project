@@ -17,7 +17,6 @@ att_list = att[:,1]
 
 
 def attract(destination):
-    return attractions["Popular Attraction"][attractions["Unnamed: 0"].str.match(destination)]
+    popular = attractions["Popular Attraction"][attractions["Unnamed: 0"].str.match(destination)]
+    print("A attraction you may want to visit: " + str(popular))
 
-popular = attract(destination)
-print("A attraction you may want to visit: " + str(popular))
