@@ -42,7 +42,7 @@ def Main_currency(destination):
                 backup_2(amount, convert)
     elif destination == "Rome":
         answer = input("Would you like to convert to from USD to Euro? ")
-        amount = float(input("How much would you like to convert (enter number)? "))
+        amount = float(input("How much would you like to convert (enter number, ex. 4.50)? "))
         if answer == "yes" or answer == "Yes":
             US_Euro(amount, "US to Euro")
         else:
