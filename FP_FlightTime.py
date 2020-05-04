@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Apr 30 20:39:03 2020
-
-@author: katewujciak
+Kate Wujciak
+Worked alone
+FP_FlightTime.py
+Flight time duration calculator.
 """
 
 import pandas as pd
@@ -15,6 +16,13 @@ ft = np.array(flight_time)
 
 
 def Main_flights(destination):
+# Parameters: 
+    # destination: the desired destination based on user input. 
+#Function purpose:
+    # This is the main flight duration function. Based on user input, it will
+    # determine the origin location.
+#Return value:
+    # Void
     origin = input("Are you flying from your current location? ")
     if origin == "yes" or origin == "Yes":
         departure(destination)
@@ -26,6 +34,13 @@ def Main_flights(destination):
             
             
 def departure(destination):
+# Parameters: 
+    # destination: the desired destination based on user input. 
+#Function purpose:
+    # This function finds the flight duration if the user is leaving from their
+    # current location.
+#Return value:
+    # Void
     current_timezone = input("What is your current timezone (EDT, CDT, MDT, or PDT)? ")
     if current_timezone == "EDT":
         col = 7
@@ -53,6 +68,12 @@ def departure(destination):
 
 
 def for_departure(depart):
+# Parameters: 
+    # depart: the desired departing location based on user input. 
+#Function purpose:
+    # Assigns appropriate column based on location.
+#Return value:
+    # col: column of departing location.
     if depart == "London":
         col = 1
     elif depart == "Rome":
@@ -70,6 +91,12 @@ def for_departure(depart):
     return col
 
 def arrival(destination):
+# Parameters: 
+    # destination: the desired departing location based on user input. 
+#Function purpose:
+    # Assigns appropriate row based on destination.
+#Return value:
+    # row: row of destination.
     if destination == "London":
         row = 0
     elif destination == "Rome":

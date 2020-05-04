@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun May  3 10:42:57 2020
-
-@author: katewujciak
+Kate Wujciak
+Worked alone
+FP_tourism.py
+This file graphs the statistics on tourists per year in each destination.
 """
 
 import pandas as pd
@@ -17,6 +18,15 @@ years = [2014,2015,2016,2017,2018]
 international = ["London","Rome","Tokyo"]
 
 def graph_tourists(destination, future_yr):
+# Parameters: 
+    # destination: the desired destination based on user input. 
+    # future_yr: user-inputted year.
+#Function purpose:
+    # Graphs the annual number of tourists to a given location. It also
+    # graphs the line of best fit and predicts number of tourists
+    # for the given year.
+#Return value:
+    # Void
     if destination == "London":
         start = 0
         stop = 1

@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 24 13:22:03 2020
-
-@author: katewujciak
+Kate Wujciak
+Worked alone
+FP_currency.py
+Currency converter file.
 """
 
 def Main_currency(destination):
+# Parameters: 
+    # destination: the desired destination based on user input. 
+#Function purpose:
+    # This is the main currency exchange function. Based on the destination
+    # it will determine which currencies to convert from and to. It offers 
+    # the most likely currency conversion but also allows the user to pick
+    # what to convert.
+#Return value:
+    # Void
     if destination == "Tokyo":
         answer = input("Would you like to convert to from USD to Yen? ")
         if answer == "yes" or answer == "Yes":
@@ -45,6 +55,13 @@ def Main_currency(destination):
         print("You do not need to convert.")
 
 def US_Pound(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # converts USD to Pound or vise versa.
+#Return value:
+    # Void
     if convert == "US to Pound":
         pound = round((0.81*amount),2)
         print("£" + str(pound))
@@ -53,6 +70,13 @@ def US_Pound(amount, convert):
         print("$" + str(dollar))
 
 def US_Yen(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # converts USD to Yen or vise versa.
+#Return value:
+    # Void
     if convert == "US to Yen":
         yen = round((107.47*amount),2)
         print("¥" + str(yen))
@@ -61,6 +85,13 @@ def US_Yen(amount, convert):
         print("$" + str(dollar))
 
 def US_Euro(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # converts USD to Euro or vise versa.
+#Return value:
+    # Void
     if convert == "US to Euro":
         euro = round((0.92*amount),2)
         print("€" + str(euro))
@@ -69,6 +100,13 @@ def US_Euro(amount, convert):
         print("$" + str(dollar))
 
 def Pound_Euro(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # converts Euro to Pound or vise versa.
+#Return value:
+    # Void
     if convert == "Pound to Euro":
         euro = round((1.14*amount),2)
         print("€" + str(euro))
@@ -77,6 +115,13 @@ def Pound_Euro(amount, convert):
         print("£" + str(pound))
 
 def Pound_Yen(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # converts Yen to Pound or vise versa.
+#Return value:
+    # Void
     if convert == "Pound to Yen":
         yen = round((132.89*amount),2)
         print("¥" + str(yen))
@@ -85,6 +130,13 @@ def Pound_Yen(amount, convert):
         print("£" + str(pound))
     
 def Euro_Yen(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # converts Euro to Yen or vise versa.
+#Return value:
+    # Void
     if convert == "Euro to Yen":
         yen = round((116.31*amount),2)
         print("¥" + str(yen))
@@ -93,6 +145,13 @@ def Euro_Yen(amount, convert):
         print("€" + str(euro))
 
 def backup_1(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # If user wants to convert a different currency it calls appropriate fnc.
+#Return value:
+    # Void
     if "US" and "Euro" in convert:
         US_Euro(amount, convert)
     elif "US" and "Pound" in convert:
@@ -103,6 +162,13 @@ def backup_1(amount, convert):
         print("Cannot convert this currency")    
 
 def backup_2(amount, convert):
+# Parameters: 
+    # amount: amount of money to convert.
+    # convert: string of which currencies to convert.
+#Function purpose:
+    # If user wants to convert a different currency it calls appropriate fnc.
+#Return value:
+    # Void
     if "Pound" and "Euro" in convert:
         Pound_Euro(amount, convert)
     elif "Euro" and "Yen" in convert:

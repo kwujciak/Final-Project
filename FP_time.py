@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Apr 25 15:05:01 2020
-
-@author: katewujciak
+Kate Wujciak
+Worked alone
+FP_time.py
+Displays the time in desired destination.
 """
 
 import time
@@ -14,6 +15,13 @@ europe = ["London", "Rome"]
 USA = ["New York", "Chicago", "Denver", "Los Angeles"]
 
 def Main_time(destination):
+# Parameters: 
+    # destination: the desired destination based on user input. 
+#Function purpose:
+    # This is the main time zone function. Based on the current timezone and 
+    # destination, it calls the appropriate function and prints the new time.
+#Return value:
+    # current_timezone: current time of user.
     current_timezone = input("What is your current timezone (EDT, CDT, MDT, or PDT)? ")
     if destination in europe:
         new_h = Europe(current_timezone)
@@ -29,6 +37,13 @@ def Main_time(destination):
         return current_timezone
     
 def Europe(current_timezone):
+# Parameters: 
+    # current_timezone: current time of user. 
+#Function purpose:
+    # This function takes the user's current timezone and calculates the current
+    # time in Europe. 
+#Return value:
+    # new_hour: time at destination.
     if current_timezone == "EDT":
         new_hour = hour_military + 5
         if new_hour >= 24:
@@ -59,6 +74,13 @@ def Europe(current_timezone):
             return new_hour
  
 def Japan(current_timezone):
+# Parameters: 
+    # current_timezone: current time of user. 
+#Function purpose:
+    # This function takes the user's current timezone and calculates the current
+    # time in Japan. 
+#Return value:
+    # new_hour: time at destination.
     if current_timezone == "EDT":
         new_hour = hour_military + 13
         if new_hour >= 24:
@@ -89,11 +111,18 @@ def Japan(current_timezone):
             return new_hour
             
 def US(current_timezone, destination):
+# Parameters: 
+    # current_timezone: current time of user. 
+    # destination: the desired destination based on user input.
+#Function purpose:
+    # This function takes the user's current timezone and calculates the current
+    # time at the destination. 
+#Return value:
+    # new_hour: time at destination.
     US_timezone = US_time(destination)
     if US_timezone == current_timezone:
         new_hour = hour_military
         return new_hour
-#        print(str(hour_military)+ ":" + str(minute))
     elif US_timezone == "EDT":
         if current_timezone == "CDT":
             new_hour = hour_military + 1
@@ -136,6 +165,13 @@ def US(current_timezone, destination):
             return new_hour
 
 def US_time(destination):
+# Parameters: 
+    # destination: the desired destination based on user input.
+#Function purpose:
+    # This function takes the user's inputed destination (if in the US)
+    # and finds its corresponding timezone.
+#Return value:
+    # US_timezone: timezone of destination.
     if destination == "New York":
         US_timezone = "EDT"
         return US_timezone

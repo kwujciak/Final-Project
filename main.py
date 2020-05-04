@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri May  1 09:59:51 2020
-
-@author: katewujciak
+Kate Wujciak
+Worked alone
+main.py
+Driver File for Final Project
 """
 import FP_time as time_fnc
 import FP_currency as cur
@@ -11,8 +12,9 @@ import FP_attractions as at
 import FP_FlightTime as ft
 import FP_tourism as tour
 
-
+print("")
 print("Welcome to your personal travel tool!")
+print("")
 print("Compatible destinations are:")
 print("London, Rome, Tokyo, New York, Chicago, Denver, and Los Angeles")
 tools = input("What would you like to know about your destination? ")
