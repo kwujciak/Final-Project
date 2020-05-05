@@ -67,7 +67,6 @@ def graph_tourists(destination, future_yr):
     x = np.array(years)
     m = (np.amax(y_val)-np.amin(y_val))/(np.amax(years)-np.amin(years))
     y = (m*(x-mid))+med
-    print(m)
     plt.plot(x,y)
     
     if destination in international:
@@ -85,6 +84,4 @@ def graph_tourists(destination, future_yr):
     print("The predicted # of tourists in " + str(destination) + " in " + str(future_yr) + " is " + str(int(y1)) + " million.")
     if future_yr == 2020:
         print("This number may be affected by the COVID-19 crisis.") 
-#print(np.amin(tourism))
-#print(np.amax(years))
-graph_tourists("Rome", 2020)        
+
