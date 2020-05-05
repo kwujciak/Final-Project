@@ -24,10 +24,16 @@ FP_tourism.py - graphs the statistics of tourism for each location. Specifically
 main.py - main console that runs each of the files as needed.
 
 Libraries:
+(Imported in code)
 - numpy
 - pandas
 - time
 - matplotlib.pyplot
+
+Methods used:
+- interpolation/extrapolation
+- descriptive statistics
+- fitting lines to data
 
 Design:
 - The core of this project is using the user-inputted strings throughout many different functions. This is to avoid asking the user any unnecessary questions. CSV files are important in this project. Parsing through these CSV files is important in getting the specific information for each location.

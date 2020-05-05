@@ -67,6 +67,7 @@ def graph_tourists(destination, future_yr):
     x = np.array(years)
     m = (np.amax(y_val)-np.amin(y_val))/(np.amax(years)-np.amin(years))
     y = (m*(x-mid))+med
+    print(m)
     plt.plot(x,y)
     
     if destination in international:
@@ -86,3 +87,4 @@ def graph_tourists(destination, future_yr):
         print("This number may be affected by the COVID-19 crisis.") 
 #print(np.amin(tourism))
 #print(np.amax(years))
+graph_tourists("Rome", 2020)        
